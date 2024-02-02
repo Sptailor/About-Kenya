@@ -1,0 +1,91 @@
+<html lang="en" class="fade-in">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact us</title>
+        <link rel="icon" href="images/favicon.ico" >
+
+       <link rel="stylesheet" href="styles/p1.css">
+       <script >
+        function validateForm() {
+          result=false;
+
+            var fname = document.getElementById('fname').value;
+            var lname = document.getElementById('lname').value;
+            var email = document.getElementById('email').value;
+
+         
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(email)) {
+                return result;
+            }
+
+            
+            result=true;
+            alert("form submitted");
+
+
+
+            return result; 
+        }
+
+
+       </script>
+       
+
+    </head>
+    <body>
+        <h3><a href="index.html"style="border-left:3px solid"> Back </a> </h3>
+
+
+
+        <nav>
+            <ul>
+             <h3>  
+                <li>  <h2 style="text-align: center;">Please fill out the form to contact us  </h2> </li>
+                 
+            </h3>
+            </ul>
+        </nav>
+
+        <form method="get" onsubmit="validateForm()">
+         <div id="form">
+            <div id="inner">
+            <div id="top">
+             <div id="first" style="padding-top: 10px;">
+             <label for="fname">First name:</label>
+             <input type="text" id="fname" name="name"  placeholder="First name" pattern="[A-Za-z]+" title="Please enter a valid name " required>
+            </div>
+            <div id="last" style="padding-top: 10px;">
+              <label for="lname">Last name:</label>
+              <input type="text" id="lname" name="name" placeholder="Last name " pattern="[A-Za-z]+" title="Please enter a valid name"  required>
+            </div>
+            <div id="mail" style="padding-top: 10px;">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email"  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="abc@.." title="Enter a valid email address" required>
+            </div >
+            <div style="padding-top:10px">
+              <label for="reason">Reason:</label>
+              <textarea id="reason" name="reason" rows="3" cols="60"></textarea>
+             </div>
+          </div>
+            <fieldset style="padding-top: 10px;">
+                <legend>Would you like to subscribe to our mailing list:</legend>
+            
+              <input type="radio" id="subscribe" name="subscription" value="subscribe" checked>
+              <label for="subscribe">Subscribe</label>
+        
+              <input type="radio" id="unsubscribe" name="subscription" value="unsubscribe">
+              <label for="unsubscribe">Unsubscribe</label>  
+            </fieldset>
+         </div>
+         </div >
+           <div  id="form-btn" >
+        
+            <button id="sub" type="submit" >Submit</button>
+            <button id="clear" type="reset">Clear</button>
+          </div>
+        </form>
+        
+    </body>
+
+</html>
